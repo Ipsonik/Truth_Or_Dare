@@ -45,13 +45,16 @@
                 android:layout_height="0dp"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="8dp"
-
+                android:clipToPadding="false"
+                android:paddingBottom="40dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/question_list_tv"
+                app:layout_constraintVertical_bias="0.0"
                 tools:listitem="@layout/question_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -84,7 +87,7 @@
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Dodaj pytanie"
+                    android:hint="@string/add_question"
                     android:text="@{questionViewModel.editTextQuestion.toString()}"
                     android:textSize="18sp" />
 
@@ -98,7 +101,8 @@
             android:onClick="@{() -> questionViewModel.addQuestion(questionInputEt.getText().toString())}"
             android:src="@drawable/ic_baseline_add_24"
             app:layout_anchor="@id/bottom_menu"
-            app:tint="@color/primaryColor" />
+            app:tint="@color/primaryColor"
+            android:contentDescription="@string/add_question_FAB" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

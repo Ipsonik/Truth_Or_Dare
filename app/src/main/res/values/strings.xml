@@ -14,4 +14,6 @@
     <string name="bottle">Butelka</string>
     <string name="question_list">Question List</string>
     <string name="question_add_hint">Wpisz treść pytania</string>
+    <string name="add_question">Dodaj pytanie</string>
+    <string name="add_question_FAB">Add question</string>
 </resources>
