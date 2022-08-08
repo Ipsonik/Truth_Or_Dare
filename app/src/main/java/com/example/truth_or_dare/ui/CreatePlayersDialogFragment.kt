@@ -23,7 +23,7 @@ class CreatePlayersDialogFragment : DialogFragment() {
     private lateinit var binding: FragmentCreatePlayersDialogBinding
     private val viewModel: QuestionViewModel by activityViewModels {
         QuestionViewModel.QuestionViewModelFactory(
-            (activity?.application as QuestionApplication).database.questionDao()
+            (activity?.application as QuestionApplication).repository
         )
     }
 

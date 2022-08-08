@@ -3,10 +3,11 @@ package com.example.truth_or_dare.viewmodels
 import androidx.lifecycle.*
 import com.example.truth_or_dare.database.Question
 import com.example.truth_or_dare.database.QuestionDao
+import com.example.truth_or_dare.database.QuestionRepository
 import com.example.truth_or_dare.models.Player
 import kotlinx.coroutines.launch
 
-class QuestionViewModel(private val questionDao: QuestionDao) : ViewModel() {
+class QuestionViewModel(private val questionRepository: QuestionRepository) : ViewModel() {
 
     private val _players: MutableLiveData<List<Player>> = MutableLiveData(listOf())
     val players: LiveData<List<Player>> = _players
@@ -26,19 +27,19 @@ class QuestionViewModel(private val questionDao: QuestionDao) : ViewModel() {
     private var _askedQuestions: MutableLiveData<List<String>> = MutableLiveData(listOf())
     private var _askedPlayers: MutableLiveData<List<String>> = MutableLiveData(listOf())
 
-    val allQuestions: LiveData<List<Question>> = questionDao.getAllQuestions().asLiveData()
+    val allQuestions: LiveData<List<Question>> = questionRepository.allQuestions.asLiveData()
     var editTextQuestion: MutableLiveData<String> = MutableLiveData("")
 
 
     private fun insertQuestion(question: Question) {
         viewModelScope.launch {
-            questionDao.insertQuestion(question)
+            questionRepository.insertQuestion(question)
         }
     }
 
     fun deleteQuestion(question: Question) {
         viewModelScope.launch {
-            questionDao.deleteQuestion(question)
+            questionRepository.deleteQuestion(question)
         }
     }
 
@@ -111,12 +112,12 @@ class QuestionViewModel(private val questionDao: QuestionDao) : ViewModel() {
     }
 
 
-    class QuestionViewModelFactory(private val questionDao: QuestionDao) :
+    class QuestionViewModelFactory(private val questionRepository: QuestionRepository) :
         ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(QuestionViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return QuestionViewModel(questionDao) as T
+                return QuestionViewModel(questionRepository) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
         }

@@ -21,7 +21,7 @@ class QuestionListFragment : Fragment() {
     private lateinit var binding: FragmentQuestionListBinding
     private val viewModel: QuestionViewModel by activityViewModels {
         QuestionViewModel.QuestionViewModelFactory(
-            (activity?.application as QuestionApplication).database.questionDao()
+            (activity?.application as QuestionApplication).repository
         )
     }
 
