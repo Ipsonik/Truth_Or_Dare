@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homePageFragment"
+            type="com.example.truth_or_dare.ui.HomePageFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.HomePageFragment">
+
+        <TextView
+            android:id="@+id/question_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/truth_or_dare"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/play_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="224dp"
+            android:elevation="100dp"
+            android:onClick="@{() -> homePageFragment.play()}"
+            android:text="@string/play_button"
+            android:textColor="@color/secondaryLightColor"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_button" />
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:elevation="40dp"
+            android:onClick="@{() -> homePageFragment.question()}"
+            android:text="@string/add_button"
+            android:textColor="@color/secondaryLightColor"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/play_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/play_button"
+            app:layout_constraintTop_toBottomOf="@+id/play_button" />
+
+        <Button
+            android:id="@+id/nft_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/bottle"
+            android:textColor="@color/secondaryLightColor"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/add_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/add_button"
+            app:layout_constraintTop_toBottomOf="@+id/add_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

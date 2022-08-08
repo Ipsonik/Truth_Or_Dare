@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>Ile masz lat?</item>
+        <item>Jak masz na imię?</item>
+        <item>Co u ciebie?</item>
+        <item>Jaki jest twój ulbiony kolor?</item>
+        <item>Czego najbardziej żałujesz?</item>
+        <item>Kto był twoją pierwszą miłością?</item>
+        <item>Jaka była najgorsza randka, na jakiej byłeś?</item>
+        <item>Jaka była twoja najbardziej żenująca sytuacja?</item>
+        <item>Jakie było twoje ostatnie kłamstwo?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.truth_or_dare.ui.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePageFragment_to_createPlayersDialogFragment"
+            app:destination="@id/createPlayersDialogFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createPlayersDialogFragment"
+        android:name="com.example.truth_or_dare.ui.CreatePlayersDialogFragment"
+        android:label="CreatePlayersDialogFragment">
+        <action
+            android:id="@+id/action_createPlayersDialogFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.truth_or_dare.ui.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_CreatePlayersDialogFragment"
+            app:destination="@id/createPlayersDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="com.example.truth_or_dare.ui.QuestionListFragment"
+        android:label="QuestionListFragment" />
+
+
+</navigation>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Truth_Or_Dare</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="truth_or_dare">TRUTH OR DARE \nAPP</string>
+    <string name="play_button">GRAJ</string>
+    <string name="add_button">DODAJ PYTANIE</string>
+    <string name="crypto_button">JOINT NFT</string>
+    <string name="Next">Dalej</string>
+    <string name="again">Zagraj ponownie</string>
+    <string name="pass_player">Wprowadź nazwę gracza</string>
+    <string name="add_player">DODAJ GRACZA</string>
+    <string name="play_btn">GRAJ</string>
+    <string name="players_tv">DODAJ GRACZY</string>
+    <string name="bottle">Butelka</string>
+    <string name="question_list">Question List</string>
+    <string name="question_add_hint">Wpisz treść pytania</string>
+</resources>
