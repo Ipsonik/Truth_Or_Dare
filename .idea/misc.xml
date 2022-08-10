@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background.xml" value="0.2465" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/dialog_background.xml" value="0.303" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/edit_text_background.xml" value="0.303" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2465" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_bottle_spin.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_create_players_dialog.xml" value="0.22" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_game.xml" value="0.2657894736842105" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_home_page.xml" value="0.33" />

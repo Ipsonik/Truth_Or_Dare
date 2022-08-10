@@ -1,60 +1,76 @@
 package com.example.truth_or_dare.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.Animation.AnimationListener
+import android.view.animation.RotateAnimation
+import android.widget.ImageView
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import com.example.truth_or_dare.R
+import com.example.truth_or_dare.databinding.FragmentBottleSpinBinding
+import java.util.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BottleSpinFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BottleSpinFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentBottleSpinBinding
+    private lateinit var bottle: ImageView
+    private var random = Random()
+    private var lastDir = 0
+    private var spinning: Boolean = false
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottle_spin, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_bottle_spin,
+            container,
+            false
+        )
+        binding.bottleSpinFragment = this
+        bottle = binding.bottleImage
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BottleSpinFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BottleSpinFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
+    fun spin() {
+        if (!spinning) {
+            val newDir = random.nextInt(1800)
+            val pivX = (bottle.width / 2).toFloat()
+            val pivY = (bottle.height / 2).toFloat()
+
+            val rotate = RotateAnimation(lastDir.toFloat(), newDir.toFloat(), pivX, pivY)
+
+            rotate.duration = 2500
+            rotate.fillAfter = true
+            rotate.setAnimationListener(object : AnimationListener {
+                override fun onAnimationStart(p0: Animation?) {
+                    spinning = true
                 }
-            }
+
+                override fun onAnimationEnd(p0: Animation?) {
+                    spinning = false
+                }
+
+                override fun onAnimationRepeat(p0: Animation?) {
+
+                }
+
+            })
+
+            lastDir = newDir
+
+            bottle.startAnimation(rotate)
+        }
     }
+
+
 }

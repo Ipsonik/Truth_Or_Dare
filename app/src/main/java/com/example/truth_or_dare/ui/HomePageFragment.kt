@@ -41,5 +41,9 @@ class HomePageFragment : Fragment() {
         val action = HomePageFragmentDirections.actionHomePageFragmentToQuestionListFragment()
         view?.findNavController()?.navigate(action)
     }
+    fun bottleSpin(){
+        val action = HomePageFragmentDirections.actionHomePageFragmentToBottleSpinFragment()
+        view?.findNavController()?.navigate(action)
+    }
 
 }

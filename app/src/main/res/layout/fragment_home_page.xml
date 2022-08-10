@@ -41,7 +41,6 @@
             android:textColor="@color/secondaryLightColor"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/question_button" />
 
@@ -56,20 +55,19 @@
             android:textColor="@color/secondaryLightColor"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="@+id/play_button"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/play_button"
             app:layout_constraintTop_toBottomOf="@+id/play_button" />
 
         <Button
-            android:id="@+id/nft_button"
+            android:id="@+id/bottleSpin_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="4dp"
             android:text="@string/bottle"
             android:textColor="@color/secondaryLightColor"
             android:textStyle="bold|italic"
+            android:onClick="@{() -> homePageFragment.bottleSpin()}"
             app:layout_constraintEnd_toEndOf="@+id/add_button"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/add_button"
             app:layout_constraintTop_toBottomOf="@+id/add_button" />
 

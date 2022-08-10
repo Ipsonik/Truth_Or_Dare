@@ -9,9 +9,20 @@
             type="com.example.truth_or_dare.database.Question" />
     </data>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/textView"
@@ -21,7 +32,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:text="@{question.content}"
-            android:textSize="30sp"
+            android:textSize="20sp"
+            android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageButton"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,4 +52,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

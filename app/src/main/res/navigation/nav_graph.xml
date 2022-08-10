@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_questionListFragment"
             app:destination="@id/questionListFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_bottleSpinFragment"
+            app:destination="@id/bottleSpinFragment" />
     </fragment>
     <dialog
         android:id="@+id/createPlayersDialogFragment"
@@ -38,6 +41,10 @@
         android:id="@+id/questionListFragment"
         android:name="com.example.truth_or_dare.ui.QuestionListFragment"
         android:label="QuestionListFragment" />
+    <fragment
+        android:id="@+id/bottleSpinFragment"
+        android:name="com.example.truth_or_dare.ui.BottleSpinFragment"
+        android:label="BottleSpinFragment" />
 
 
 </navigation>

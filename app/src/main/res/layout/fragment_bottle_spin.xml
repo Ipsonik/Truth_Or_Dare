@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.BottleSpinFragment">
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="bottleSpinFragment"
+            type="com.example.truth_or_dare.ui.BottleSpinFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".ui.BottleSpinFragment"
+        android:background="@drawable/basic_background"
+        >
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/bottleImage"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#12FFF7"
+            android:onClick="@{() -> bottleSpinFragment.spin()}"
+            android:text="@string/spin_button"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:icon="@drawable/ic_spin"
+            app:iconSize="30sp"
+            app:iconTint="@color/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottleImage"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
