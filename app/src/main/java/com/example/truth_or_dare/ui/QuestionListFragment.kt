@@ -1,9 +1,17 @@
 package com.example.truth_or_dare.ui
 
+import android.app.Activity
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsets
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -32,7 +40,13 @@ class QuestionListFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_question_list, container, false)
         val adapter = QuestionListAdapter(viewModel)
+
         binding.questionListFragment = this
+
+
+
+
+
         binding.apply {
             questionViewModel = viewModel
             lifecycleOwner = viewLifecycleOwner
@@ -49,7 +63,9 @@ class QuestionListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
+
 }
 
 

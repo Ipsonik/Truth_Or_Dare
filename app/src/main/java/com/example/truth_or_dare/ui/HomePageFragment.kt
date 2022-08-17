@@ -1,9 +1,12 @@
 package com.example.truth_or_dare.ui
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsets
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -22,6 +25,12 @@ class HomePageFragment : Fragment() {
     ): View? {
         val fragmentBinding = FragmentHomePageBinding.inflate(inflater, container, false)
         binding = fragmentBinding
+
+        val animDrawable = binding.rootLayout.background as AnimationDrawable
+        animDrawable.setEnterFadeDuration(10)
+        animDrawable.setExitFadeDuration(5000)
+        animDrawable.start()
+
 
         return fragmentBinding.root
     }
@@ -45,5 +54,7 @@ class HomePageFragment : Fragment() {
         val action = HomePageFragmentDirections.actionHomePageFragmentToBottleSpinFragment()
         view?.findNavController()?.navigate(action)
     }
+
+
 
 }

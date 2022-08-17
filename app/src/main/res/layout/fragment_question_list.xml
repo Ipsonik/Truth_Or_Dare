@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="36dp"
                 android:text="@string/question_list"
                 android:textColor="@color/primaryColor"
                 android:textSize="40sp"
@@ -48,7 +48,7 @@
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
-                android:paddingBottom="40dp"
+                android:paddingBottom="70dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -65,9 +65,8 @@
             android:id="@+id/bottom_menu"
             style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_gravity="bottom"
-            android:gravity="bottom"
             android:padding="8dp"
             app:elevation="16dp"
             app:fabAlignmentMode="end"
@@ -82,7 +81,8 @@
                 android:background="@drawable/edit_text_background"
                 app:boxBackgroundColor="@color/primaryLightColor"
                 app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
+                app:boxStrokeWidthFocused="0dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/question_input_et"
