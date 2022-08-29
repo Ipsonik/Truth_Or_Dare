@@ -31,7 +31,7 @@ class CreatePlayersDialogFragment : DialogFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = DataBindingUtil.inflate(
             inflater,
@@ -46,13 +46,15 @@ class CreatePlayersDialogFragment : DialogFragment() {
         binding.recyclerView.apply {
             adapter = PlayerListAdapter()
         }
+
+
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
         val background = ColorDrawable(Color.TRANSPARENT)
-        val inset = InsetDrawable(background,20)
+        val inset = InsetDrawable(background, 20)
         dialog?.window?.setBackgroundDrawable(inset)
         dialog?.window?.setLayout(
             (LinearLayout.LayoutParams.MATCH_PARENT),
@@ -62,8 +64,7 @@ class CreatePlayersDialogFragment : DialogFragment() {
     }
 
     fun play() {
-        val action =
-            CreatePlayersDialogFragmentDirections.actionCreatePlayersDialogFragmentToGameFragment()
+        val action = CreatePlayersDialogFragmentDirections.actionCreatePlayersDialogFragmentToGameFragment()
         findNavController().navigate(action)
     }
 

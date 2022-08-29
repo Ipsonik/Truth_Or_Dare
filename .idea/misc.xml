@@ -3,13 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background.xml" value="0.2465" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background_animation.xml" value="0.247" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background_first.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background_second.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_background_third.xml" value="0.247" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/basic_backround_third.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/dialog_background.xml" value="0.303" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/edit_text_background.xml" value="0.303" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/gradient_animation.xml" value="0.247" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2465" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.247" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/ic_spin.xml" value="0.247" />
+        <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/drawable/question_item_background.xml" value="0.247" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_bottle_spin.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/kacpe/AndroidStudioProjects/Truth_Or_Dare/app/src/main/res/layout/fragment_create_players_dialog.xml" value="0.22" />

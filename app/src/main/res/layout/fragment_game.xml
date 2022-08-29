@@ -19,9 +19,10 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/basic_background_animation"
         tools:context=".ui.GameFragment">
 
 

@@ -17,4 +17,7 @@
     <string name="add_question">Dodaj pytanie</string>
     <string name="add_question_FAB">Add question</string>
     <string name="spin_button">ZAKRĘĆ</string>
+    <string name="delete_button_content_des">Delete</string>
+    <string name="Bottle_image_content_description">Bottle</string>
+    <string name="home_page_brain_icon_content_des">Hompe page brain icon</string>
 </resources>

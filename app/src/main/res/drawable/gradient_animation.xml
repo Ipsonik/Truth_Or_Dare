@@ -2,13 +2,13 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:duration="5000"
-        android:drawable="@drawable/basic_background"
+        android:drawable="@drawable/background_first"
         />
     <item android:duration="5000"
-        android:drawable="@drawable/corel_background"
+        android:drawable="@drawable/background_second"
         />
     <item android:duration="5000"
-        android:drawable="@drawable/basic_background_third"
+        android:drawable="@drawable/background_third"
         />
 
 

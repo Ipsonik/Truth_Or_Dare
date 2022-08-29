@@ -1,5 +1,6 @@
 package com.example.truth_or_dare.ui
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,7 @@ class BottleSpinFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_bottle_spin,
@@ -36,6 +37,14 @@ class BottleSpinFragment : Fragment() {
         )
         binding.bottleSpinFragment = this
         bottle = binding.bottleImage
+
+
+        val animDrawable = binding.rootLayout.background as AnimationDrawable
+        animDrawable.apply {
+            setEnterFadeDuration(10)
+            setExitFadeDuration(5000)
+            start()
+        }
 
         return binding.root
     }
@@ -61,13 +70,9 @@ class BottleSpinFragment : Fragment() {
                 }
 
                 override fun onAnimationRepeat(p0: Animation?) {
-
                 }
-
             })
-
             lastDir = newDir
-
             bottle.startAnimation(rotate)
         }
     }

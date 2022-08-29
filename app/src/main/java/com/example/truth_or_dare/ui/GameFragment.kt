@@ -1,8 +1,8 @@
 package com.example.truth_or_dare.ui
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -13,6 +13,7 @@ import com.example.truth_or_dare.R
 import com.example.truth_or_dare.database.Question
 import com.example.truth_or_dare.databinding.FragmentGameBinding
 import com.example.truth_or_dare.viewmodels.QuestionViewModel
+import android.view.View as View
 
 
 class GameFragment : Fragment() {
@@ -29,7 +30,7 @@ class GameFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
         binding.questionViewModel = viewModel
@@ -39,6 +40,14 @@ class GameFragment : Fragment() {
         }
         viewModel.allQuestions.observe(this.viewLifecycleOwner, observer)
         binding.gameFragment = this
+
+        val animDrawable = binding.rootLayout.background as AnimationDrawable
+        animDrawable.apply {
+            setEnterFadeDuration(10)
+            setExitFadeDuration(5000)
+            start()
+        }
+
         return binding.root
     }
 

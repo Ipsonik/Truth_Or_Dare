@@ -11,11 +11,11 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.HomePageFragment"
         android:background="@drawable/gradient_animation"
-        android:id="@+id/root_layout">
+        tools:context=".ui.HomePageFragment">
 
         <TextView
             android:id="@+id/question_button"
@@ -29,34 +29,34 @@
             android:textSize="60sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/brain_iv"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/brain"
             android:layout_marginTop="30dp"
+            android:src="@drawable/brain"
             app:layout_constraintBottom_toTopOf="@+id/play_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_button" />
+            app:layout_constraintTop_toBottomOf="@+id/question_button"
+            android:contentDescription="@string/home_page_brain_icon_content_des"/>
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/play_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
+            android:layout_marginTop="70dp"
             android:elevation="100dp"
             android:onClick="@{() -> homePageFragment.play()}"
             android:text="@string/play_button"
-            android:layout_marginTop="70dp"
             android:textColor="@color/secondaryLightColor"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/brain_iv"/>
+            app:layout_constraintTop_toBottomOf="@id/brain_iv" />
 
         <Button
             android:id="@+id/add_button"
@@ -77,10 +77,10 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="4dp"
+            android:onClick="@{() -> homePageFragment.bottleSpin()}"
             android:text="@string/bottle"
             android:textColor="@color/secondaryLightColor"
             android:textStyle="bold|italic"
-            android:onClick="@{() -> homePageFragment.bottleSpin()}"
             app:layout_constraintEnd_toEndOf="@+id/add_button"
             app:layout_constraintStart_toStartOf="@+id/add_button"
             app:layout_constraintTop_toBottomOf="@+id/add_button" />
