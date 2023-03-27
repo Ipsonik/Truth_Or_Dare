@@ -8,7 +8,8 @@ import com.example.truth_or_dare.models.Player
 import kotlinx.coroutines.launch
 
 class QuestionViewModel(private val questionRepository: QuestionRepository) : ViewModel() {
-
+    
+    private val editLine = null
     private val _players: MutableLiveData<List<Player>> = MutableLiveData(listOf())
     val players: LiveData<List<Player>> = _players
 
