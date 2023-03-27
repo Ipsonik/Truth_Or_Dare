@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class QuestionViewModel(private val questionRepository: QuestionRepository) : ViewModel() {
     
-    private val editLine = null
+    private val editLine = "Zmieniona linia"
     private val _players: MutableLiveData<List<Player>> = MutableLiveData(listOf())
     val players: LiveData<List<Player>> = _players
 
